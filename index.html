@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title> Travel & Tourism</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+      <style>
+         *{
+         margin:0;
+         padding:0;
+         box-sizing:border-box;
+         font-family:Arial, sans-serif;
+         }
+         body{
+         background:#f4f4f4;
+         scroll-behavior:smooth;
+         }
+         /* NAVBAR */
+         header{
+         background:linear-gradient(to right,#0f4c81,#1e81b0);
+         padding:15px 50px;
+         display:flex;
+         justify-content:space-between;
+         align-items:center;
+         color:white;
+         position:sticky;
+         top:0;
+         z-index:1000;
+         }
+         header h1{
+         font-size:28px;
+         }
+         nav a{
+         color:white;
+         text-decoration:none;
+         margin:0 15px;
+         font-weight:bold;
+         transition:0.3s;
+         }
+         nav a:hover{
+         color:yellow;
+         }
+         /* HERO SECTION */
+         .hero{
+         height:90vh;
+         background:url("img/background.jpeg") no-repeat center center/cover;
+         display:flex;
+         align-items:center;
+         justify-content:center;
+         text-align:center;
+         color:white;
+         position:relative;
+         }
+         .hero::after{
+         content:'';
+         position:absolute;
+         top:0;
+         left:0;
+         width:100%;
+         height:100%;
+         background:rgba(0,0,0,0.5);
+         }
+         .hero-content{
+         position:relative;
+         z-index:2;
+         }
+         .hero h2{
+         font-size:50px;
+         margin-bottom:10px;
+         }
+         .hero p{
+         font-size:20px;
+         margin-bottom:20px;
+         }
+         .btn{
+         padding:12px 25px;
+         background:#ff9800;
+         color:white;
+         border:none;
+         border-radius:5px;
+         cursor:pointer;
+         font-size:16px;
+         transition:0.3s;
+         }
+         .btn:hover{
+         background:#e68900;
+         }
+         /* SECTION */
+         section{
+         padding:60px 50px;
+         text-align:center;
+         }
+         section h2{
+         font-size:32px;
+         margin-bottom:20px;
+         color:#0f4c81;
+         }
+         /* ABOUT */
+         .about p{
+         max-width:800px;
+         margin:auto;
+         font-size:18px;
+         line-height:1.6;
+         }
+         /* DESTINATIONS */
+        .destinations{display:flex;gap:20px;justify-content:center;}
+         .card{
+         background:white;width:250px;border-radius:10px;overflow:hidden;
+         transition:0.4s;box-shadow:0 5px 15px rgba(0,0,0,0.1);
+         }
+
+       
+         .card img{width:100%;}
+        .card:hover{transform:scale(1.50);}
+         /* SERVICES */
+         .services{
+         display:flex;
+         justify-content:center;
+         gap:20px;
+         flex-wrap:wrap;
+         }
+         .card{
+         background:#f5f5f5;
+         padding:20px;
+         width:220px;
+         border-radius:10px;
+         }
+         .card i{
+         font-size:35px;
+         color:#2c5aa0;
+         margin-bottom:10px;
+         }
+         /* BLOG */
+        .blog {
+        background:url("img/img4.jpg") no-repeat center center/cover;
+        background-size:60%;
+        padding:80px 50px;
+        color:white;
+        }
+         .blog h2{
+         color:white;
+         }
+         .blog ul{
+       
+         list-style:disc;
+         text-align:left;
+         max-width:600px;
+         margin:50px auto;
+         font-size:18px;
+         color:white;
+         }
+         /* CONTACT */
+         .contact{
+         background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') no-repeat center center/cover;
+         color:white;
+         position:relative;
+         }
+         .contact h2{
+         color:white;
+         }
+         .contact::after{
+         content:'';
+         position:absolute;
+         top:0;
+         left:0;
+         width:100%;
+         height:100%;
+         background:rgba(0,0,0,0.6);
+         }
+         .contact-content{
+         position:relative;
+         z-index:2;
+         }
+         form{
+         max-width:500px;
+         margin:auto;
+         display:flex;
+         flex-direction:column;
+         gap:15px;
+         }
+         form input, form textarea{
+         padding:10px;
+         border:none;
+         border-radius:5px;
+         }
+         form textarea{
+         height:100px;
+         }
+         footer{
+         background:#0f4c81;
+         color:white;
+         text-align:center;
+         padding:15px;
+         }
+         /* RESPONSIVE */
+         @media(max-width:768px){
+         header{
+         flex-direction:column;
+         }
+         nav{
+         margin-top:10px;
+         }
+         .hero h2{
+         font-size:35px;
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <h1> Travel & Tourism</h1>
+        <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#dest">Destinations</a>
+  <a href="#services">Services</a>
+  <a href="#blog">Blog</a>
+  <a href="#contact">Contact</a>
+</nav>
+      </header>
+      <div class="hero" id="home">
+         <div class="hero-content">
+            <h2>Welcome To Our Travel and Tourism</h2>
+            <p>Explore the world with comfort and safety</p>
+            <a href="#contact"><button
+            class="btn">Book Now</button></a>
+
+         </div>
+      </div>
+      <section class="about" id="about">
+         <h2>About Us</h2>
+         <p>
+            We are a professional travel tourism providing the best travel packages, flight bookings, hotel reservations and holiday planning services.
+            Our mission is to make your travel safe, comfortable and memorable. We provide customized tours for families, couples and corporate clients.
+         </p>
+      </section>
+      <!-- DESTINATIONS -->
+      <section id="dest">
+         <h2>Popular Destinations</h2>
+         <div class="destinations">
+            <div class="card">
+               <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+               <h3>Paris</h3>
+            </div>
+            <div class="card">
+               <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+               <h3>Maldives</h3>
+            </div>
+            <div class="card">
+               <img src="https://cdn.urlaubsguru.at/wp-content/uploads/2019/04/iStock-183346577.jpg">                
+               <h3>Dubai</h3>
+            </div>
+            <div class="card">
+            <img src="https://www.disneytouristblog.com/wp-content/uploads/2023/02/castle-magical-dreams-hong-kong-disneyland-hkdl-night-scaled.webp">
+<h3>Hong Kong Disneyland</h3>
+</div>
+
+<div class="card">
+<img src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/london-famous.jpg">
+<h3>London</h3>
+</div>
+
+
+         </div>
+      </section>
+      <!-- SERVICES -->
+      <section id="services">
+         <h2>Our Services</h2>
+         <div class="services">
+            <div class="card">
+               <i class="fas fa-plane"></i>
+               <h3>Flight Booking</h3>
+               <p>Book domestic & international flights.</p>
+            </div>
+            <div class="card">
+               <i class="fas fa-hotel"></i>
+               <h3>Hotel Reservation</h3>
+               <p>Find luxury & budget hotels.</p>
+            </div>
+            <div class="card">
+               <i class="fas fa-map-marked-alt"></i>
+               <h3>Tour Packages</h3>
+               <p>Customized travel packages.</p>
+            </div>
+            <div class="card">
+               <i class="fas fa-passport"></i>
+               <h3>Visa Assistance</h3>
+               <p>Quick visa processing help.</p>
+            </div>
+         </div>
+      </section>
+      <section class="blog" id="blog">
+         <h2>Latest Blog</h2>
+         <ul>
+            <li>Top 10 destinations to visit this year</li>
+            <li>How to plan a perfect holiday trip</li>
+            <li>Best budget travel tips for students</li>
+            <li>Must-visit beaches around the world</li>
+         </ul>
+      </section>
+      <section class="contact" id="contact">
+         <div class="contact-content">
+            <h2>Contact Us</h2>
+            <form>
+               <input type="text" placeholder="Your Name" required>
+               <input type="email" placeholder="Your Email" required>
+               <textarea placeholder="Your Message"></textarea>
+               <button class="btn">Send Message</button>
+            </form>
+         </div>
+      </section>
+      <footer>
+         © 2026 Travel & Tourism | Designed by Vaishnavi Kodag and Shreya Shinde
+      </footer>
+   </body>
+</html>
